@@ -9,7 +9,18 @@ conexao = mysql.connector.connect(
 
 cursor = conexao.cursor()
 
-# CRUD
+# CREATE
+nomeProduto = 'Chocolate'
+valorProduto = 7
+comando = f'insert into vendas(nomeProduto, valorProduto) values ("{nomeProduto}", {valorProduto})'
+cursor.execute(comando)
+conexao.commit()
+
+# READ
+
+# UPDATE
+
+# DELETE
 
 cursor.close()
 conexao.close()
