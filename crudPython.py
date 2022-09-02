@@ -17,12 +17,17 @@ cursor.execute(comando)
 conexao.commit()"""
 
 # READ
-comando = 'select * from vendas'
+"""comando = 'select * from vendas'
 cursor.execute(comando)
 resultado = cursor.fetchall()
-print(resultado)
+print(resultado)"""
 
 # UPDATE
+nomeProduto = 'Toddy'
+valorProduto = 5
+comando = f'update vendas set valorProduto = {valorProduto} where nomeProduto = "{nomeProduto}"'
+cursor.execute(comando)
+conexao.commit()
 
 # DELETE
 
