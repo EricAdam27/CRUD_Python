@@ -10,13 +10,17 @@ conexao = mysql.connector.connect(
 cursor = conexao.cursor()
 
 # CREATE
-nomeProduto = 'Chocolate'
+"""nomeProduto = 'Chocolate'
 valorProduto = 7
 comando = f'insert into vendas(nomeProduto, valorProduto) values ("{nomeProduto}", {valorProduto})'
 cursor.execute(comando)
-conexao.commit()
+conexao.commit()"""
 
 # READ
+comando = 'select * from vendas'
+cursor.execute(comando)
+resultado = cursor.fetchall()
+print(resultado)
 
 # UPDATE
 
