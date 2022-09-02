@@ -23,13 +23,16 @@ resultado = cursor.fetchall()
 print(resultado)"""
 
 # UPDATE
-nomeProduto = 'Toddy'
+"""nomeProduto = 'Toddy'
 valorProduto = 5
 comando = f'update vendas set valorProduto = {valorProduto} where nomeProduto = "{nomeProduto}"'
 cursor.execute(comando)
-conexao.commit()
+conexao.commit()"""
 
 # DELETE
+comando = 'delete from vendas where idVendas = 1'
+cursor.execute(comando)
+conexao.commit()
 
 cursor.close()
 conexao.close()
